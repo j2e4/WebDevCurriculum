@@ -35,6 +35,7 @@ git
   * 버전 관리 시스템
   * 프로젝트의 버전 관리를 수월하게 하기 위해 사용하는 도구
    * 변경 이력 확인, 특정 버전으로 이동 등
+
 GitHub
   * git으로 관리하는 프로젝트를 모아놓은 웹 서비스
   * 개발팀 공동의 프로젝트를 관리할 수 있는 원격 저장소를 제공한다.
@@ -44,21 +45,27 @@ GitHub
 clone
   * 레파지토리를 복제하는 명령어
   * 앞으로 개발에 기여할 git 프로젝트를 로컬 환경의 저장소로 복제할 때 사용한다.
+
 add
   * 수정 내용을 stage(수정 내용을 저장소에 적용하기 전에 잠시 보관)하는 명령어
   * 파일 이름, 경로로 stage할 수 있으며 git restore --staged 명령으로 unstage할 수 있다. 
   * -p 옵션을 사용하면 내용을 확인하면서 stage할 수 있다.
   * commit을 준비하기 위해 사용한다.
+
 commit
   * 작업한 내용을 로컬 저장소에 저장하는 명령어
+
 push
   * 로컬 저장소에 commit한 내용을 원격 저장소에 저장하는 명령어
+
 pull
  * 원격 환경과 로컬 환경을 동기화하는 명령어
  * 원격 환경에 새롭게 저장된 내역을 로컬 환경으로 가져와 버전을 맞출 때 사용한다.
+
 branch
   * 브랜치 관련 명령어. 브랜치를 생성하고 삭제(-d 옵션)하거나 조회(--list 옵션)하는 등 브랜치와 관련된 동작을 수행한다.
   * 브랜치를 구분해 작업하고 싶을 때, 오래된 브랜치를 정리하고 싶을 때와 같이 실무자의 니즈에 따라 자유롭게 사용한다.
+
 stash
   * 작업하던 내용을 임시 저장하는 명령어
   * pull, rebase를 할 때 발생할 수 있는 충돌을 예방하거나 적용하지 않을 테스트 코드를 버리고 싶지 않을 때 사용한다.
@@ -110,3 +117,5 @@ git revert 명령을 사용해 이미 원격 저장소에 적용된 커밋 내�
 ## Link
 * [위키 백과 - 구성 관리](https://ko.wikipedia.org/wiki/%EA%B5%AC%EC%84%B1_%EA%B4%80%EB%A6%AC)
 * [리누스 토발즈 인터뷰 (한글 번역)](https://sjp38.github.io/ko/post/torvalds_interview_for_30th_anniversary_of_linux_kernel_part1/)
+* [git add](https://www.daleseo.com/git-add/)
+* [git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
