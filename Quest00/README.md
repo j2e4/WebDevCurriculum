@@ -64,7 +64,37 @@ stash
   * pull, rebase를 할 때 발생할 수 있는 충돌을 예방하거나 적용하지 않을 테스트 코드를 버리고 싶지 않을 때 사용한다.
 ```
 * git의 Object, Commit, Head, Branch, Tag는 어떤 개념일까요? git 시스템은 프로젝트의 히스토리를 어떻게 저장할까요?
+```
+git은 key-value 형태로 데이터를 저장한다.
+무엇을 저장하든 unique한 key를 반환하는데 이 key는 저장했던 내용을 나중에 다시 접근할 때 사용한다.
+
+Object
+  * git으로 관리하는 모든 데이터
+  * .git/objects 경로(object database)에 key-value 형태로 저장된다. 데이터 타입이 무엇이든 상관없다.
+  * git hash-object 명령으로 object database에 data object를 저장할 수 있다.
+  * git cat-file 명령으로 object에 대한 내용을 확인할 수 있다.
+
+Commit
+  * 이전 버전에서 수정한 내용(delta)을 저장하는 행위
+  * 특정 시점의 스냅샷(이전에 완료한 모든 작업과 delta를 포함한 작업 트리)을 의미하기도 한다. 
+
+Head
+  * 현재 브랜치가 가리키고 있는 커밋
+
+Branch
+  * 커밋에 대한 참조
+  * 해당 커밋(이번에 적용한 수정 내역)과 이전에 완료한 모든 작업 내역을 가지고 있다.
+
+Tag
+  * 특정 커밋을 가리키는 지점
+  * 영구적이며 변하지 않는다.
+
+git은 히스토리를 기록할 때 이전 커밋과 다음 커밋의 달라진 점을 저장한다.
+```
 * 리모트 git 저장소에 원하지 않는 파일이 올라갔을 때 이를 되돌리려면 어떻게 해야 할까요?
+```
+git revert 명령을 사용해 이미 원격 저장소에 적용된 커밋 내용을 되돌리는 커밋을 새로 생성한다.
+```
 
 ## Quest
 * GitHub에 가입한 뒤, [이 커리큘럼의 GitHub 저장소](https://github.com/KnowRe-Dev/WebDevCurriculum)의 우상단의 Fork 버튼을 눌러 자신의 저장소에 복사해 둡니다.
