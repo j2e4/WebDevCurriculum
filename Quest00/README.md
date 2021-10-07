@@ -12,6 +12,7 @@
 ## Resources
 * [Resources to learn Git](https://try.github.io)
 * [Learn Git Branching](https://learngitbranching.js.org/?locale=ko)
+  - level rampup2
 * [Inside Git: .Git directory](https://githowto.com/git_internals_git_directory)
 
 ## Checklist
@@ -65,6 +66,7 @@ pull
 branch
   * 브랜치 관련 명령어. 브랜치를 생성하고 삭제(-d 옵션)하거나 조회(--list 옵션)하는 등 브랜치와 관련된 동작을 수행한다.
   * 브랜치를 구분해 작업하고 싶을 때, 오래된 브랜치를 정리하고 싶을 때와 같이 실무자의 니즈에 따라 자유롭게 사용한다.
+  * git checkout -b 명령으로 브랜치 생성과 동시에 해당 브랜치로 이동할 수 있다.
 
 stash
   * 작업하던 내용을 임시 저장하는 명령어
@@ -86,7 +88,7 @@ Commit
   * 특정 시점의 스냅샷(이전에 완료한 모든 작업과 delta를 포함한 작업 트리)을 의미하기도 한다. 
 
 Head
-  * 현재 브랜치가 가리키고 있는 커밋
+  * 현재 작업 중인 커밋으로 브랜치와 일치하지 않을 수 있다.
 
 Branch
   * 커밋에 대한 참조
