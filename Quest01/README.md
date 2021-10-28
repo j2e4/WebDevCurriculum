@@ -53,7 +53,7 @@
     표준 문서로 채택하기 위해 자문 위원회가 검토한다. 필요에 따라 Candidate Recommandation 단계로 돌아가거나 Working Group에게 되돌려 보내질 수 있다. 마찬가지로 작업이 종료될 수 있다.
     1. Recommandation  
     W3C가 사용을 권고하는 표준 문서로 발표한다.
-    - 언제든지 작업을 종료할 수 있으며 작업 결과는 Recommandation 또는 Working Group Note로 공개한다.
+    > 언제든지 작업을 종료할 수 있으며 작업 결과는 Recommandation 또는 Working Group Note로 공개한다.
 
 * 브라우저의 역사는 어떻게 될까요?
   * Internet Explorer가 브라우저 시장을 독점하면서 어떤 문제가 일어났고, 이 문제는 어떻게 해결되었을까요?
@@ -69,7 +69,7 @@
     - IE, Edge: 5.4%
     - Opera: 1.3%
 
-    출처: [https://www.w3counter.com/trends](https://www.w3counter.com/trends)
+    출처: [https://www.w3counter.com/trends](https://www.w3counter.com/trends)  
     브라우저 점유율을 알아보는 것이 중요한 이유는.. 크로스 브라우징 때문일까? 아직 잘 모르겠다.
 
   * 브라우저 엔진(렌더링 엔진)이란 무엇일까요? 어떤 브라우저들이 어떤 엔진을 쓸까요?
@@ -80,7 +80,7 @@
     - 브라우저별로 사용하는 엔진
       - Chrome: **Blink** (**Webkit**에서 파생된 엔진)
       - Safari: **Webkit** (**KHTML**에서 파생된 엔진)
-      - Konqueror([KDE](https://www.notion.so/863f0b90067c478c95a493216a46e672)의 중심이 되는 브라우저, 파일 관리자, 파일 뷰어): **KHTML** (KDE 프로젝트가 개발한 엔진)
+      - Konqueror(KDE의 중심이 되는 브라우저, 파일 관리자, 파일 뷰어): **KHTML** (KDE 프로젝트가 개발한 엔진)
       - Firefox: **Gecko** (모질라 재단의 엔진)
 
   * 모바일 시대 이후, 최근에 출시된 브라우저들은 어떤 특징을 가지고 있을까요?
