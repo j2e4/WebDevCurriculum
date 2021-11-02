@@ -12,7 +12,7 @@
 ## Resources
 * [Resources to learn Git](https://try.github.io)
 * [Learn Git Branching](https://learngitbranching.js.org/?locale=ko)
-  - level rampup2
+  - level rampup3
 * [Inside Git: .Git directory](https://githowto.com/git_internals_git_directory)
 
 ## Checklist
