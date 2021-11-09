@@ -23,7 +23,28 @@
 ## Checklist
 * CSS를 HTML에 적용하는 세 가지 방법은 무엇일까요?
   * 세 가지 방법 각각의 장단점은 무엇일까요?
-* CSS 규칙의 우선순위는 어떻게 결정될까요?
+    1. External CSS  
+      `<head>`태그 밑에 `<link>`태그로 외부 CSS 파일의 스타일을 적용한다.
+      - 장점: HTML 파일의 구조가 깔끔해지며 같은 CSS 파일을 여러 곳에서 사용할 수 있다.
+      - 단점: CSS 파일을 다운로드하는 시간이 필요하고 로드하는 동안 스타일이 적용되지 않는다.
+    2. Internal CSS  
+      `<head>`태그 밑에 `<style>`태그 내부에 적용할 CSS 스타일을 선언한다.
+      - 장점: 해당 HTML파일에만 적용되므로 CSS 선택자 사용이 비교적 자유롭다.
+      - 단점: HTML 파일의 사이즈가 커져 로딩 시간이 증가할 수 있다.
+    3. Inline CSS  
+      각 태그의 속성(attribute)으로 해당 태그만을 위한 스타일을 적용한다.  
+      ex) `<div style="padding: 5px;">Hello World</div>`
+      - 장점: 빠르게 스타일을 적용할 수 있다.
+      - 단점: HTML 구조가 복잡해져 가독성이 떨어진다.
+
+* CSS 규칙의 우선순위는 어떻게 결정될까요?  
+  아래 나열된 번호가 낮을 수록 우선 순위가 높다. (나중에 선언된 스타일이 이전에 선언된 스타일을 Override, 덮어쓴다.)
+  1. Inline CSS
+  1. Internal CSS, External CSS
+  1. 브라우저 기본 스타일
+
+  > `!important`가 선언된 경우 `!important`가 아닌 스타일보다 우선 순위가 높다. 나중에 선언된 스타일이 override하지 못한다.
+
 * CSS의 박스모델은 무엇일까요? 박스가 화면에서 차지하는 크기는 어떻게 결정될까요?
 * `float` 속성은 왜 좋지 않을까요?
 * Flexbox(Flexible box)와 CSS Grid의 차이와 장단점은 무엇일까요?
@@ -38,3 +59,7 @@
 * CSS의 어려움을 극복하기 위해 어떤 방법들이 제시되고 나왔을까요?
 * CSS가 브라우저에 의해 해석되고 적용되기까지 내부적으로 어떤 과정을 거칠까요?
 * 웹 폰트의 경우에는 브라우저 엔진 별로 어떤 과정을 통해 렌더링 될까요?
+
+## Link
+- [W3C Schools - CSS How To](https://www.w3schools.com/css/css_howto.asp)
+- [CSS Inheritance, Cascade, and Specificity](http://web.simmons.edu/~grabiner/comm244/weekfour/css-concepts.html)
