@@ -5,16 +5,82 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <title>NAVER</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(#fff, 90%, rgb(236, 243, 255));
+        }
+
+        .services-shortcut {
+            float: right;
+        }
+        .services-shortcut > :not(:last-child) {
+            margin-right: 0.5em;
+        }
+
+        .form-wrapper {
+            margin: 0.5em 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-wrapper > #search-form {
+            display: flex;
+            width: 100%;
+            border: 1px solid #959595;
+            padding: 0.5em;
+        }
+        .form-wrapper > #search-form > input {
+            flex: 1 1 auto;
+            border: none;
+        }
+        .form-wrapper > #search-form > input:focus {
+            outline: none;
+        }
+        .form-wrapper > #search-form > button {
+            background-color: transparent;
+            border: none;
+        }
+
+        .form-wrapper > .flex-box-services {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+            gap: 1rem;
+        }
+
+        .main {
+            background: linear-gradient( rgb(236, 243, 255), 10%, #f7f7f7);
+        }
+        .main > article {
+            margin: 0.5em 30%;
+            background-color: #fff;
+            padding: 1.5em;
+        }
+        .main > article h1 {
+            margin-top: 0;
+        }
+
+        .footer {
+            background-color: #f7f7f7;
+        }
+    </style>
     <!-- TODO: 또 무엇이 필요할까요? -->
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div>
             <button id="menu-open" type="button">
                 <i class="fas fa-bars"></i>
             </button>
-            <span id="services-shortcut">
+            <span class="services-shortcut">
                 <a href="#">
                     <span>
                         QR 체크인
@@ -32,7 +98,7 @@
                 </a>
             </span>
         </div>
-        <div>
+        <div class="box-horizontal form-wrapper">
             <div id="logo">
                 <img src="#" alt="네이버 로고" />
             </div>
@@ -48,7 +114,7 @@
                     <i class="fas fa-map-marker-alt"></i>
                 </button>
             </div>
-            <ul id="services">
+            <ul id="services" class="flex-box-services">
                 <li>
                     <a href="#">
                         <img src="#" alt="news" />
@@ -254,7 +320,7 @@
         <!-- TODO: main은 어떤 식으로 나눌 수 있을까요? -->
     </section>
 
-    <footer>
+    <footer class="footer">
         <div>
             <a href="#">로그인</a>
             <a href="#">전체서비스</a>

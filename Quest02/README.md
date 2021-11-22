@@ -56,8 +56,14 @@
 * `float` 속성은 왜 좋지 않을까요?  
   (복잡한) 레이아웃을 구성하기 위해 float를 사용하는 것은 hack이라고 한다. float는 레이아웃을 구성하는 목적이 아닌 float를 적용할 요소의 주변을 텍스트나 인라인 요소로 감싸려는 목적으로 사용해야한다.
 
-* Flexbox(Flexible box)와 CSS Grid의 차이와 장단점은 무엇일까요?
-* CSS의 비슷한 요소들을 어떤 식으로 정리할 수 있을까요?
+* Flexbox(Flexible box)와 CSS Grid의 차이와 장단점은 무엇일까요?  
+  Flexbox는 한 줄로 된 행 또는 한 줄로 된 열, 즉 1차원을 위해 설계된 레이아웃이고 grid는 행, 열을 모두 고려해 설계된 2차원의 레이아웃이다.  
+  **Flexbox**(Content 중심)는 아이템의 크기에 맞춰 유연한 레이아웃을 형성한다. 컨테이너의 크기와 아이템의 크기에 맞추어 적절하게 아이템들 사이의 간격을 띄워준다. 넘치면 다음 줄로 줄바꿈(`flex-wrap` 속성)해준다.  
+  **grid**(Layout 중심)는 우선 레이아웃을 만들고 Content를 표현한다. 떄문에 정렬된 레이아웃을 표현하기에 좋다.  
+  - [예제 코드](https://jsfiddle.net/krgy8wnL/)
+  
+* CSS의 비슷한 요소들을 어떤 식으로 정리할 수 있을까요?  
+  하나의 CSS 파일에 선언해두고 HTML 파일에 <link> 태그를 이용해 재사용할 수 있다.
 
 ## Quest
 * Quest 01에서 만들었던 HTML을 바탕으로, [이 그림](screen.png)의 레이아웃과 CSS를 최대한 비슷하게 흉내내 보세요. 꼭 완벽히 정확할 필요는 없으나 align 등의 속성은 일치해야 합니다.
@@ -75,3 +81,4 @@
 - [MDN - CSS 기본 박스 모델 입문](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 - [CSS Tricks - Is CSS float deprecated?](https://css-tricks.com/is-css-float-deprecated/)
 - [MDN - float](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
+- [MDN - Grid and flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_grid_layout#grid_and_flexbox)
