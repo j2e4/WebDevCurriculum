@@ -56,19 +56,112 @@
         }
 
         .main {
-            background: linear-gradient( rgb(236, 243, 255), 10%, #f7f7f7);
+            background: linear-gradient(#ecf3ff, 10%, #f7f7f7);
         }
         .main > article {
-            margin: 0.5em 30%;
+            margin: 0.5em 25%;
             background-color: #fff;
             padding: 1.5em;
+        }
+        .main > article.flex-box {
+            display: flex;
         }
         .main > article h1 {
             margin-top: 0;
         }
+        .main > article h1.no-margin {
+            margin: 0;
+        }
+        .main > article h4 {
+            margin: 0;
+        }
+        .main > article img.mr-5 {
+            margin-right: 0.5rem;
+        }
+
+        .main > :first-child {
+            overflow: hidden;
+            position: relative;
+        }
+        .main > :first-child > .weather {
+            flex: 1 0 70%;
+        }
+        .main > :first-child > .weather > .image-wrapper {
+            float: left;
+            display: inline-flex;
+            align-items: center;
+            height: 100%;
+            margin-right: 0.5rem;
+        }
+        .main > :nth-child(2) > .main-article-header {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+        .main > :nth-child(2) > .weather-types {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .main > :nth-child(2) > .weather-types > span {
+            background-color: #f1f6ff;
+            color: #4e4e4e;
+            padding: 0.6rem;
+        }
+        .main > :nth-child(2) > .weather-types > span.selected {
+            background-color: #5875a7;
+            color: white;
+        }
+        .main > :nth-child(2) > ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        .main > :nth-child(2) > ul > li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1 0 0;
+            gap: 0.2rem;
+        }
+        .main > :nth-child(2) > ul > li .today {
+            background-color: #6d6d6d;
+            color: white;
+            padding: 0.1rem 0.3rem;
+            border-radius: 1rem;
+        }
+        .main > :nth-child(3) > div {
+            flex: 1 0 0;
+        }
+        .main > :nth-child(3) img {
+            float: left;
+        }
+        .main > :nth-child(4) {
+            text-align: center;
+        }
+        .main > :nth-child(4) > h3 {
+            display: inline-block;
+            font-weight: normal;
+            margin: 0;
+        }
+        .main > :nth-child(5) {
+            align-items: center;
+        }
+        .main > :nth-child(6) > h1 {
+            display: inline-block;
+        }
+        .main > :nth-child(7) > header h1 {
+            display: inline-block;
+        }
+        .main > :nth-child(7) > header button {
+            float: right;
+        }
 
         .footer {
             background-color: #f7f7f7;
+        }
+
+        .ml-auto {
+            margin-left: auto;
         }
     </style>
     <!-- TODO: 또 무엇이 필요할까요? -->
@@ -168,15 +261,17 @@
     </header>
 
     <section class="main">
-        <article>
-            <div>
-                <img src="#" alt="moon" />
+        <article class="flex-box">
+            <div class="weather">
+                <div class="image-wrapper">
+                    <img src="#" alt="moon" />
+                </div>
                 <div>
-                    <div>10° 맑음</div>
+                    <h4>10° 맑음</h4>
                     <div>어제보다 2° 높아요</div>
                 </div>
             </div>
-            <div>
+            <div class="on-air" style="white-space: nowrap;">
                 <img srt="#" alt="지금 방송중" />
                 <img srt="#" alt="푸른빛" />
                 <img srt="#" alt="라디오" />
@@ -184,7 +279,7 @@
             </div>
         </article>
         <article>
-            <header>
+            <header class="main-article-header">
                 <h1>날씨</h1>
                 <span>
                     서울시 잠실동
@@ -192,120 +287,122 @@
                         <img src="#" alt="현재 위치 찾기" />
                     </button>
                 </span>
-                <span>
+                <span class="ml-auto">
                     <button type="button">
                         <img src="#" alt="접기" />
                     </button>
                 </span>
             </header>
-            <div>
+            <div class="weather-types">
                 <span>시간대별 날씨</span>
                 <span>시간대별 미세먼지</span>
-                <span>주간 날씨</span>
+                <span class="selected">주간 날씨</span>
                 <span>주간 미세먼지</span>
             </div>
             <ul>
                 <li>
                     19°
-                    <img src="#" alt="vertical line" />
+                    <img src="#" alt="line" />
                     8°
                     <img src="#" alt="sun" />
                     <div>어제</div>
                 </li>
                 <li>
                     22°
-                    <img src="#" alt="vertical line" />
+                    <img src="#" alt="line" />
                     7°
                     <img src="#" alt="sun" />
-                    <div>오늘</div>
+                    <div class="today">오늘</div>
                 </li>
                 <li>
                     17°
-                    <img src="#" alt="vertical line" />
+                    <img src="#" alt="line" />
                     11°
                     <img src="#" alt="rain" />
                     <div>월</div>
                 </li>
                 <li>
                     18°
-                    <img src="#" alt="vertical line" />
+                    <img src="#" alt="line" />
                     12°
                     <img src="#" alt="rain" />
                     <div>화</div>
                 </li>
                 <li>
                     17°
-                    <img src="#" alt="vertical line" />
+                    <img src="#" alt="line" />
                     4°
                     <img src="#" alt="sun" />
                     <div>수</div>
                 </li>
                 <li>
                     19°
-                    <img src="#" alt="vertical line" />
+                    <img src="#" alt="line" />
                     4°
                     <img src="#" alt="sun" />
                     <div>목</div>
                 </li>
                 <li>
                     19°
-                    <img src="#" alt="vertical line" />
+                    <img src="#" alt="line" />
                     6°
                     <img src="#" alt="sun" />
                     <div>금</div>
                 </li>
                 <li>
                     19°
-                    <img src="#" alt="vertical line" />
+                    <img src="#" alt="line" />
                     8°
                     <img src="#" alt="sun" />
                     <div>토</div>
                 </li>
                 <li>
                     18°
-                    <img src="#" alt="vertical line" />
+                    <img src="#" alt="line" />
                     6°
                     <img src="#" alt="sun" />
                     <div>일</div>
                 </li>
             </ul>
         </article>
-        <article>
+        <article class="flex-box">
             <div>
-                <img src="#" alt="virus-slash" />
+                <img src="#" alt="virus-slash" class="mr-5"/>
                 <div>
-                    <div>코로나19</div>
+                    <h4>코로나19</h4>
                     <div>국내외 확진 현황</div>
                 </div>
             </div>
             <div>
-                <img src="#" alt="ox" />
+                <img src="#" alt="ox" class="mr-5" />
                 <div>
-                    <div>코로나19 팩트체크</div>
+                    <h4>코로나19 팩트체크</h4>
                     <div>백신 정보 팩트는?</div>
                 </div>
             </div>
         </article>
         <article>
-            <img src="#" alt="태극기와 건물" />
-            <span>제102주년 대한민국 임시정부 수립일</span>
+            <img src="#" alt="태극기와 건물" class="mr-5" />
+            <h3>제102주년 <b>대한민국 임시정부 수립일</b></h3>
         </article>
-        <article>
-            <img src="#" alt="Naver 미니 로고" />
+        <article class="flex-box">
+            <img src="#" alt="앱 로고" class="mr-5" />
             <span>앱으로 <b>새로운 네이버</b>를 더 쾌적하게 사용해 보세요.</span>
-            <button type="button">앱 사용하기</button>
+            <button type="button" class="ml-auto">앱 사용하기</button>
         </article>
-        <article>
-            <h1>웹툰</h1>
-            <span>
+        <article class="flex-box">
+            <h1 class="no-margin">웹툰</h1>
+            <span class="ml-auto">
                 <button type="button">
                     <img src="#" alt="접기"/>
                 </button>
             </span>
         </article>
         <article>
-            <h1>인기 주제 판을 확인해보세요!</h1>
-            <span>판관리</span>
+            <header>
+                <h1>인기 주제 판을 확인해보세요!</h1>
+                <button type="button">판관리</button>
+            </header>
             <div>
                 <div>영화판</div>
                 <div>뿜판</div>
