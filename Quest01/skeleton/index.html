@@ -15,9 +15,6 @@
             background: linear-gradient(#fff, 90%, rgb(236, 243, 255));
         }
 
-        .services-shortcut {
-            float: right;
-        }
         .services-shortcut > :not(:last-child) {
             margin-right: 0.5em;
         }
@@ -152,16 +149,47 @@
         .main > :nth-child(7) > header h1 {
             display: inline-block;
         }
-        .main > :nth-child(7) > header button {
-            float: right;
+        .main > :nth-child(7) > div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+        .main > :nth-child(7) > div > .pane {
+            background-color: #eceff1;
+            padding: 0.6rem;
+        }
+        .main > :last-child > span {
+            border: 1px solid #3bd100;
+            border-radius: 1rem;
+            padding: 0 0.3rem;
+            color: #3bd100;
+            font-weight: bolder;
+            margin-right: 0.5rem;
         }
 
         .footer {
             background-color: #f7f7f7;
+            text-align: center;
+            padding: 2em;
+        }
+        .footer > div {
+            margin: 0.5rem;
+        }
+        .footer > div > a {
+            padding: 0 0.8rem;
+        }
+        .footer > div > a:not(:last-child) {
+            border-right: 1px solid lightgray;
+        }
+        .footer img {
+            margin: 1rem 0;
         }
 
         .ml-auto {
             margin-left: auto;
+        }
+        .float-right {
+            float: right;
         }
     </style>
     <!-- TODO: 또 무엇이 필요할까요? -->
@@ -173,7 +201,7 @@
             <button id="menu-open" type="button">
                 <i class="fas fa-bars"></i>
             </button>
-            <span class="services-shortcut">
+            <span class="services-shortcut float-right">
                 <a href="#">
                     <span>
                         QR 체크인
@@ -394,39 +422,66 @@
             <h1 class="no-margin">웹툰</h1>
             <span class="ml-auto">
                 <button type="button">
-                    <img src="#" alt="접기"/>
+                    <img src="#" alt="펼치기"/>
                 </button>
             </span>
         </article>
         <article>
             <header>
                 <h1>인기 주제 판을 확인해보세요!</h1>
-                <button type="button">판관리</button>
+                <button type="button" class="float-right">판관리</button>
             </header>
             <div>
-                <div>영화판</div>
-                <div>뿜판</div>
-                <div>웹툰판</div>
-                <div>경제M판</div>
+                <div class="pane">
+                    <img src="#" alt="테이프" class="mr-5"><!--
+                    -->영화판
+                    <button type="button" class="float-right">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+                <div class="pane">
+                    <img src="#" alt="말풍선" class="mr-5"><!--
+                    -->뿜판
+                    <button type="button" class="float-right">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+                <div class="pane">
+                    <img src="#" alt="다각형" class="mr-5"><!--
+                    -->웹툰판
+                    <button type="button" class="float-right">
+                        <i class="fas fa-angle-right"></i>
+                    </button>                    
+                </div>
+                <div class="pane">
+                    <img src="#" alt="그래프" class="mr-5"><!--
+                    -->경제M판
+                    <button type="button" class="float-right">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
             </div>
         </article>
         <article>
             <span>알립니다</span>
             네이버앱 업데이트 사전 안내
+            <button type="button" class="float-right">
+                <i class="fas fa-angle-right"></i>
+            </button>
         </article>
         <!-- TODO: main은 어떤 식으로 나눌 수 있을까요? -->
     </section>
 
     <footer class="footer">
         <div>
-            <a href="#">로그인</a>
-            <a href="#">전체서비스</a>
-            <a href="#">PC버전</a>
+            <a href="#">로그인</a><!--
+            --><a href="#">전체서비스</a><!--
+            --><a href="#">PC버전</a>
         </div>
         <div>
-            <a href="#">이용약관</a>
-            <a href="#"><b>개인정보처리방침</b></a>
-            <a href="#">고객센터</a>
+            <a href="#">이용약관</a><!--
+            --><a href="#"><b>개인정보처리방침</b></a><!--
+            --><a href="#">고객센터</a>
         </div>
         <img src="#" alt="Naver 회색 로고" />
         <!-- TODO: 하단의 여러 가지 링크들은 어떻게 처리하면 좋을까요? -->
