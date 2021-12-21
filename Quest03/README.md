@@ -35,7 +35,21 @@
     3. Candidate(후보): 표준의 마무리 단계. 리뷰어들의 피드백이 적용되고 검토자, ECMAScript 작성자가 승인한 단계이다. 모든 문법과 구문에 대한 설명이 완료된 스펙이 필요하다. 이후 크리티컬한 문제가 발견되지 않는 한 수정하지 않는다.
     4. Finished(완료): 표준으로 지정할 준비가 완료된 단계. 테스트에 통과했으며 integrated 스펙과 함께 tc39/ecma262에 Pull Request가 보내져 모든 ECMAScript 작성자가 Pull Request를 승인한 상태이다.
 
-* 자바스크립트의 문법은 다른 언어들과 비교해 어떤 특징이 있을까요?
+* 자바스크립트의 문법은 다른 언어들과 비교해 어떤 특징이 있을까요?  
+  - 동적 타입 언어이다. 런타임 시 타입이 정해진다.
+  - 프로토타입 기반 프로그래밍 언어이다. (cf. 클래스 기반 프로그래밍 언어)  
+    메소드와 속성을 상속하기 위해 프로토타입 객체를 사용한다.  
+    상속받은 메소드와 속성은 객체의 인스턴스에 정의되어 있는 게 아니라 객체의 생성자의 `prototype`이라는 속성에 정의되어있다.  
+    객체의 메소드와 속성을 호출하면 프로토타입 체인을 타고 올라가며 호출한 메소드와 속성을 탐색한다.  
+    * 생성자 함수: 객체를 생성하는 함수
+    * 프로토타입 체인: 객체 인스턴스와 프로토타입 객체 간의 링크, 그 프로토타입 객체와 상위 프로토타입 객체 간의 링크가 최상위 프로토타입 객체까지 연결되는 구조
+  - 싱글 스레드 기반 비동기 언어이다.
+    * 싱글 스레드  
+    자바스크립트 엔진은 하나의 Call Stack을 가진다. 후입선출(LIFO, Last In First Out) 방식으로 한 번에 하나의 함수를 호출할 수 있는 구조를 가진다는 의미이다.
+    * 비동기  
+    자바스크립트는 코드가 작성된 순서대로 실행되는 것을 보장하지 않는다. 이를 비동기라 하는데 자바스크립트가 비동기적으로 코드를 실행할 수 있는 이유는 Callback때문이다.  
+    어떤 함수를 실행할 때 콜백함수를 함께 전달하는데 함수의 실행이 완료되면 콜백함수를 자바스크립트 엔진 외부에 있는 Callback Queue(Task Queue)에 콜백 함수를 저장한다. Event Loop는 Call Stack을 주시하다가 Call Stack이 비어있으면 Callback Queue의 작업을 Call Stack으로 옮긴다.
+
   * 자바스크립트에서 반복문을 돌리는 방법은 어떤 것들이 있을까요?
 * 자바스크립트를 통해 DOM 객체에 CSS Class를 주거나 없애려면 어떻게 해야 하나요?
   * IE9나 그 이전의 옛날 브라우저들에서는 어떻게 해야 하나요?
@@ -67,3 +81,7 @@
 - [TC39 proposal process에 대해서](https://trustyoo86.github.io/javascript/2019/12/11/tc39-process.html)
 - [The TC39 Process](https://tc39.es/process-document/)
 - [ECMAScript® 2022 Language Specification](https://tc39.es/ecma262/multipage/)
+- [자바스크립트와 다른언어의 차이점](https://sdcodebase.tistory.com/22)
+- [Object Prototypes](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Object_prototypes)
+- [자바스크립트 싱글스레드인데 왜 비동기적 일까?](https://velog.io/@eamon3481/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%8B%B1%EA%B8%80%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%B8%EB%8D%B0-%EC%99%9C-%EB%B9%84%EB%8F%99%EA%B8%B0%EC%A0%81-%EC%9D%BC%EA%B9%8C)
+- [자바스크립트의 작동 원리](https://frontcode.tistory.com/30?category=685416)
