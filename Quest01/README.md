@@ -74,7 +74,7 @@
 
   * 브라우저 엔진(렌더링 엔진)이란 무엇일까요? 어떤 브라우저들이 어떤 엔진을 쓸까요?
 
-    HTML 파일을 사용자가 보는 화면(사용자 인터페이스)으로 바꿔주는(Render) 내부의 소프트웨어. PC Mag을 따르면 브라우저 엔진은 렌더링 엔진을 포함한다. 위키 백과에서도 둘은 이론적으로 구분할 수는 있지만 이는 드물다고 한다.
+    HTML 파일을 사용자가 보는 화면(사용자 인터페이스)으로 바꿔주는(Render) 내부의 소프트웨어. PC Mag을 따르면 브라우저 엔진은 렌더링 엔진을 포함한다.(아래 [Link](https://github.com/j2e4/WebDevCurriculum/tree/master/Quest01#link) 참조) 위키 백과에서도 둘은 이론적으로 구분할 수는 있지만 이는 드물다고 한다.
     - 브라우저 엔진: 사용자 인터페이스와 렌더링 엔진 사이의 동작을 제어하는 엔진
     - 렌더링 엔진: 사용자가 요청한 내용을 화면에 출력하는 엔진
     - 브라우저별로 사용하는 엔진
@@ -148,3 +148,4 @@
 
 ## Link
 * [W3 School - HTML Semantics](https://www.w3schools.com/html/html5_semantic_elements.asp)
+* [PC Mag - Browser Engine](https://www.pcmag.com/encyclopedia/term/browser-engine)

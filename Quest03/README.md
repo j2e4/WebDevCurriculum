@@ -48,14 +48,56 @@
     자바스크립트 엔진은 하나의 Call Stack을 가진다. 후입선출(LIFO, Last In First Out) 방식으로 한 번에 하나의 함수를 호출할 수 있는 구조를 가진다는 의미이다.
     * 비동기  
     자바스크립트는 코드가 작성된 순서대로 실행되는 것을 보장하지 않는다. 이를 비동기라 하는데 자바스크립트가 비동기적으로 코드를 실행할 수 있는 이유는 Callback때문이다.  
-    어떤 함수를 실행할 때 콜백함수를 함께 전달하는데 함수의 실행이 완료되면 콜백함수를 자바스크립트 엔진 외부에 있는 Callback Queue(Task Queue)에 콜백 함수를 저장한다. Event Loop는 Call Stack을 주시하다가 Call Stack이 비어있으면 Callback Queue의 작업을 Call Stack으로 옮긴다.
+    어떤 함수를 실행할 때 콜백함수를 함께 전달하는데 함수의 실행이 완료되면 콜백함수를 자바스크립트 엔진 외부에 있는 Callback Queue(Task Queue)에 저장한다. Event Loop는 Call Stack을 주시하다가 Call Stack이 비어있으면 Callback Queue의 작업을 Call Stack으로 옮긴다.
 
   * 자바스크립트에서 반복문을 돌리는 방법은 어떤 것들이 있을까요?
+    - for문
+      ```javascript
+      for (let i = 0; i < 10; i++) {
+        // code
+      }
+      ```
+    - do while문
+      ```javascript
+      let i = 0;
+
+      do {
+          i++;
+      } while (i <> 10);
+      ```
+    - while문
+      ```javascript
+      let i = 0;
+
+      while (i < 10) {
+          i++;
+      }
+      ```
+
 * 자바스크립트를 통해 DOM 객체에 CSS Class를 주거나 없애려면 어떻게 해야 하나요?
+  ```javascript
+  const box = document.querySelector('div');
+
+  // class 부여
+  box.setAttribute('class', 'my-box');
+  // class 삭제
+  box.removeAttribute('class');
+  ```
   * IE9나 그 이전의 옛날 브라우저들에서는 어떻게 해야 하나요?
-* 자바스크립트의 변수가 유효한 범위는 어떻게 결정되나요?
-  * `var`과 `let`으로 변수를 정의하는 방법들은 어떻게 다르게 동작하나요?
+
+* 자바스크립트의 변수가 유효한 범위는 어떻게 결정되나요?  
+  변수 선언문이 무엇이냐에 따라 달라진다. (`var`, `let`, `const`)
+  * `var`과 `let`으로 변수를 정의하는 방법들은 어떻게 다르게 동작하나요?  
+    `var` 키워드는 function-scoped(또는 globally-scoped) 변수를 선언한다.  
+    변수는 함수 안에서 유효하며 재선언이 가능하다. 변수 선언 부가 hoisting으로 인해 함수 최상단으로 끌어 올려지기 때문이며 먼저 선언된 변수는 후에 선언된 변수로 덮어 쓰인다.  
+    최상단 스코프에서 window 객체에 새로운 property를 생성할 수 있다.  
+
+    `let` 키워드는 block-scoped 변수를 선언한다.  
+    변수는 선언된 블록 안에서 유효하다.  
+    변수를 재선언할 수 없으며 재할당은 가능하다.
+
 * 자바스크립트의 익명 함수는 무엇인가요?
+  
   * 자바스크립트의 Arrow function은 무엇일까요?
 
 ## Quest
@@ -85,3 +127,5 @@
 - [Object Prototypes](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Object_prototypes)
 - [자바스크립트 싱글스레드인데 왜 비동기적 일까?](https://velog.io/@eamon3481/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%8B%B1%EA%B8%80%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%B8%EB%8D%B0-%EC%99%9C-%EB%B9%84%EB%8F%99%EA%B8%B0%EC%A0%81-%EC%9D%BC%EA%B9%8C)
 - [자바스크립트의 작동 원리](https://frontcode.tistory.com/30?category=685416)
+- [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [09. 호이스팅 (Hoisting)](https://simplejs.gitbook.io/olaf/09.-hoisting)
