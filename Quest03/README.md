@@ -96,9 +96,14 @@
     변수는 선언된 블록 안에서 유효하다.  
     변수를 재선언할 수 없으며 재할당은 가능하다.
 
-* 자바스크립트의 익명 함수는 무엇인가요?
-  
-  * 자바스크립트의 Arrow function은 무엇일까요?
+* 자바스크립트의 익명 함수는 무엇인가요?  
+  이름이 없는 함수로 Callback 등의 목적으로 다른 함수의 파라미터로 전달하거나 일회성으로 즉시 실행이 필요한 경우(IIFE, Immediately Invoked Function Expression)일 때 사용한다.  
+  또는 변수 선언문에 익명 함수를 할당해 변수 이름으로 사용하기도 한다. 이 경우 호이스팅되지 않아 선언 부에 도달하기 전에 호출할 경우 에러가 발생한다.
+
+  * 자바스크립트의 Arrow function은 무엇일까요?  
+  기존 함수 표현식을 좀 더 짧게 표현할 수 있는 함수 표현식이다.  
+  `function[name]([parameter]) {}` -> `([parameter]) => {}`  
+  단, 자신의 `this`가 없어 화살표 함수를 감싸는 스코프(lexical scope)의 `this`를 참조한다.
 
 ## Quest
 * (Quest 03-1) 초보 프로그래머의 영원한 친구, 별찍기 프로그램입니다.
@@ -129,3 +134,4 @@
 - [자바스크립트의 작동 원리](https://frontcode.tistory.com/30?category=685416)
 - [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 - [09. 호이스팅 (Hoisting)](https://simplejs.gitbook.io/olaf/09.-hoisting)
+- [익명함수(Anonymous function)](https://velog.io/@blackb0x/%EC%9D%B5%EB%AA%85%ED%95%A8%EC%88%98Anonymous-function)
