@@ -78,10 +78,14 @@
   ```javascript
   const box = document.querySelector('div');
 
-  // class 부여
+  // 덮어쓰기, my-box만 남는다.
   box.setAttribute('class', 'my-box');
-  // class 삭제
+  // 기존 클래스에 my-box가 추가된다.
+  box.classList.add('my-box');
+  // 모든 클래스 삭제
   box.removeAttribute('class');
+  // my-box만 삭제
+  box.classList.remove('my-box');
   ```
   * IE9나 그 이전의 옛날 브라우저들에서는 어떻게 해야 하나요?
 
@@ -135,3 +139,4 @@
 - [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 - [09. 호이스팅 (Hoisting)](https://simplejs.gitbook.io/olaf/09.-hoisting)
 - [익명함수(Anonymous function)](https://velog.io/@blackb0x/%EC%9D%B5%EB%AA%85%ED%95%A8%EC%88%98Anonymous-function)
+- [How TO - Add a Class](https://www.w3schools.com/howto/howto_js_add_class.asp)

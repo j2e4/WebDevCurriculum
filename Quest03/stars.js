@@ -1,4 +1,4 @@
-const input = 7,
+const input = prompt(),
     length = input * 2 - 1;
 for (let i = 1; i <= input; i++) {
     const star = i * 2 - 1,
