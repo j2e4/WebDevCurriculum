@@ -107,7 +107,8 @@
   * 자바스크립트의 Arrow function은 무엇일까요?  
   기존 함수 표현식을 좀 더 짧게 표현할 수 있는 함수 표현식이다.  
   `function[name]([parameter]) {}` -> `([parameter]) => {}`  
-  단, 자신의 `this`가 없어 화살표 함수를 감싸는 스코프(lexical scope)의 `this`를 참조한다.
+  단, 자신의 `this`가 없어 화살표 함수를 감싸는 스코프(lexical scope)의 `this`를 참조한다.  
+  `arguments` 객체에 대한 참조 또한 하지 않는다. 화살표 함수를 감싸는 스코프에 arguments라 이름 붙여진 변수를 참조한다.
 
 ## Quest
 * (Quest 03-1) 초보 프로그래머의 영원한 친구, 별찍기 프로그램입니다.
@@ -140,3 +141,4 @@
 - [09. 호이스팅 (Hoisting)](https://simplejs.gitbook.io/olaf/09.-hoisting)
 - [익명함수(Anonymous function)](https://velog.io/@blackb0x/%EC%9D%B5%EB%AA%85%ED%95%A8%EC%88%98Anonymous-function)
 - [How TO - Add a Class](https://www.w3schools.com/howto/howto_js_add_class.asp)
+- [Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
