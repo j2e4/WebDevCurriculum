@@ -23,7 +23,9 @@
 * [Inheritance vs Composition](https://woowacourse.github.io/javable/post/2020-05-18-inheritance-vs-composition/)
 
 ## Checklist
-* 객체지향 프로그래밍은 무엇일까요?
+* 객체지향 프로그래밍은 무엇일까요?  
+  목표하는 시스템의 행위를 구현하기 위해 **상태**와 **행위**를 가지고 다른 객체와 **협력**하는, 충분히 **자율적**인 객체들을 활용하는 프로그래밍 방법
+
   * `#`로 시작하는 프라이빗 필드는 왜 필요한 것일까요? 정보를 은폐(encapsulation)하면 어떤 장점이 있을까요?
   * 다형성이란 무엇인가요? 다형성은 어떻게 코드 구조의 정리를 도와주나요?
   * 상속이란 무엇인가요? 상속을 할 때의 장점과 단점은 무엇인가요?
@@ -45,3 +47,6 @@
 ## Advanced
 * 객체지향의 역사는 어떻게 될까요?
 * Smalltalk, Java, Go, Kotlin 등의 언어들로 넘어오면서 객체지향 패러다임 측면에서 어떤 발전이 있었을까요?
+
+## Links
+- [객체지향의 사실과 오해](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788998139766&orderClick=LEa&Kc=#N)
