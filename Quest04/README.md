@@ -39,10 +39,27 @@
   코드의 중복을 막을 수 있지만, 자식 객체가 필요하지 않은 것까지 상속받아야 하는 상황이 발생할 수 있다.
 
   * OOP의 합성(Composition)이란 무엇인가요? 합성이 상속에 비해 가지는 장점은 무엇일까요?  
-  하나의 객체가 필요한 기능을 가진 다른 객체를 포함하는 관계이다. 상속 관계가 아닌 독립적인 객체를 포함하도록 설계되었기 때문에 요구사항의 수정에 따라 유연한 대처가 가능하다.
+  하나의 객체가 필요한 기능을 가진 다른 객체를 포함하는 관계이다. 상속 관계가 아닌 독립적인 객체를 포함하도록 설계했기 때문에 요구사항의 수정에 따라 유연한 대처가 가능하다.
 
 * 자바스크립트의 클래스는 어떻게 정의할까요?
-  * 프로토타입 기반의 객체지향 프로그래밍은 무엇일까요?
+  ```javascript
+  // 생성자 함수
+  function Person(first, last) {
+    this.first = first;
+    this.last = last;
+  }
+
+  class Rectangle {
+    constructor(height, width) {
+      this.height = height;
+      this.width = width;
+    }
+  }
+  ```
+  * 프로토타입 기반의 객체지향 프로그래밍은 무엇일까요?  
+  객체는 프로토타입 객체의 속성과 메소드를 상속받는다. 다만, 상속받은 속성과 메소드는 객체 내부에 존재하는 것이 아니기 때문에 프로토타입 객체를 참조해 식별한다.  
+  프로토타입 객체는 상속할 속성과 메소드를 `prototype` 속성에 정의한다.
+
   * 자바스크립트의 클래스는 이전의 프로토타입 기반의 객체지향 구현과 어떤 관계를 가지고 있나요?
 
 ## Quest
@@ -63,3 +80,5 @@
 - [객체지향의 사실과 오해](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788998139766&orderClick=LEa&Kc=#N)
 - [객체지향 프로그래밍이 뭔가요?](https://youtu.be/vrhIxBWSJ04)
 - [코드 재사용 - 상속과 합성에 관하여 (with 카드 결제 금액 계산 애플리케이션)](https://hue-dev.site/engineering/2021/05/20/%EC%83%81%EC%86%8D%EA%B3%BC-%ED%95%A9%EC%84%B1%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC.html)
+- [자바 스크립트 객체지향 관련](https://velog.io/@nemurapty54/%EC%9E%90%EB%B0%94-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%EA%B4%80%EB%A0%A8)
+- [MDN - Object Prototypes](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Object_prototypes)
