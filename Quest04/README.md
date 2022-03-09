@@ -60,7 +60,11 @@
   객체는 프로토타입 객체의 속성과 메소드를 상속받는다. 다만, 상속받은 속성과 메소드는 객체 내부에 존재하는 것이 아니기 때문에 프로토타입 객체를 참조해 식별한다.  
   프로토타입 객체는 상속할 속성과 메소드를 `prototype` 속성에 정의한다.
 
-  * 자바스크립트의 클래스는 이전의 프로토타입 기반의 객체지향 구현과 어떤 관계를 가지고 있나요?
+  * 자바스크립트의 클래스는 이전의 프로토타입 기반의 객체지향 구현과 어떤 관계를 가지고 있나요?  
+  프로토타입을 기반으로 속성과 메소드가 상속되는 것에는 변함이 없다.  
+  차이점은 다음과 같다.
+    - 이전의 프로토타입 기반의 객체지향 프로그래밍은 `new` 키워드를 강제하지 않는다. 대신 `new` 키워드 없이 사용할 경우 `window` 객체를 rename한다. 
+    - class 기반의 객체 지향 프로그래밍은에서 `new` 키워드로 생성하는 객체를 프로토타입 체인의 하위 레벨로 할당하기 때문에 `new` 키워드를 강제한다.
 
 ## Quest
 * 웹 상에서 동작하는 간단한 바탕화면 시스템을 만들 예정입니다.
@@ -82,3 +86,6 @@
 - [코드 재사용 - 상속과 합성에 관하여 (with 카드 결제 금액 계산 애플리케이션)](https://hue-dev.site/engineering/2021/05/20/%EC%83%81%EC%86%8D%EA%B3%BC-%ED%95%A9%EC%84%B1%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC.html)
 - [자바 스크립트 객체지향 관련](https://velog.io/@nemurapty54/%EC%9E%90%EB%B0%94-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%EA%B4%80%EB%A0%A8)
 - [MDN - Object Prototypes](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Object_prototypes)
+- [[OBJECT] 합성과 유연한 설계](https://yhmane.tistory.com/206)
+- [ES2015(ES6) Class(클래스)](https://www.zerocho.com/category/ECMAScript/post/5759cd68b15f881700c32592)
+- [Javascript : Prototype vs Class](https://medium.com/@parsyval/javascript-prototype-vs-class-a7015d5473b)
